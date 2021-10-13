@@ -1,0 +1,6 @@
+---
+- name: test dig
+  hosts: all
+  tasks:
+  - name: Simple A record (IPV4 address) lookup for redhat.com
+    debug: msg="{{ lookup('dig', 'redhat.com.')}}"
